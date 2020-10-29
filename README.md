@@ -72,7 +72,7 @@ If you want to separate different code blocks inside the same function there are
 - **Write a comment** explaining what the code block you are defining with a blank line matters:
     * It helps the reviewer understand why you are separating different code blocks.
     * If the comment is meaningless you'll realize that it was an unnecessary line break.
-    For example, instead of:
+    For example, imagine you are defining a fancy neural network as a `pytorch.nn.Module`:
     ```python
     super().__init__()
   
@@ -84,7 +84,8 @@ If you want to separate different code blocks inside the same function there are
     self.layer_3 = torch.nn.Linear(in_dim, out_dim)
     self.layer_4 = torch.nn.Linear(out_dim, in_dim)
     ```
-    You could write a comment to separate the different blocks:
+    To understand if the blank lines you wrote to separate different code blocks are useful,
+     you could write a comment to separate the different blocks:
     ```python
     super().__init__()
     # Device definition
@@ -96,15 +97,15 @@ If you want to separate different code blocks inside the same function there are
     self.layer_3 = torch.nn.Linear(in_dim, out_dim)
     self.layer_4 = torch.nn.Linear(out_dim, out_dim)
     ```
-   When you do that you will realize that you spent more time reading the comments than the
-    lines that they separate, and that the "device" comment you wrote is extremely obvious for anyone that
-     is remotely familiar with `pytorch`. In that case, deleting the blank lines improves the 
-     readability of your code.
+   When you do that you will realize that you almost spent more time reading the comments than the
+    code blocks that they separate, and that the "device" comment you wrote is extremely obvious for anyone that
+    is remotely familiar with `pytorch`. In that case, deleting taht blank line improves the 
+    readability of your code.
      
-     The comments about the blocks of your fancy neural network are indeed adding 
-     some useful information, but there may be a better alternative. 
-     The comments are useful because they give information about what each layer is doing, 
-     but this is something that could be improved by finding meaningful names to the defined layers.
+    The comments about the blocks of your fancy neural network are indeed adding 
+    some useful information, but there may be a better alternative. 
+    Those comments are useful because they give information about what each layer is doing, 
+    but this is something that could be improved by finding meaningful names to the defined layers.
      
    ```python
     super().__init__()
