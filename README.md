@@ -19,7 +19,7 @@ This guide documents coding and style conventions for contributing to FragileTec
     7. Private (`__`) methods
 5. Use double quotes `"`. When a string contains single or double quote characters, however, use the other one to avoid
  backslashes in the string.
-6. Favor (f-strings)[https://realpython.com/python-string-formatting/#3-string-interpolation-f-strings-python-36] 
+6. Favor [f-strings](https://realpython.com/python-string-formatting/#3-string-interpolation-f-strings-python-36) 
 when printing variables inside a string.
 7. Do not use single letter argument names; use X and Y only in Scikit-learn context.
 9. Use [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) for docstrings.
